@@ -28,6 +28,9 @@ config interface 'hostonly'
         option netmask '255.255.255.0'
         option ip6assign '60'
 ...
+```
+
+```plain
 # /etc/config/firewall
 ...
 config zone
@@ -36,7 +39,6 @@ config zone
         option input            ACCEPT
         option output           ACCEPT
         option forward          ACCEPT
-
 ...
 ```
 
