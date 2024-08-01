@@ -1,0 +1,4 @@
+baseURL = 'https://aquanjsw.github.io/'
+languageCode = 'zh-cn'
+title = "aquanjsw's blog"
+theme = 'ananke'
