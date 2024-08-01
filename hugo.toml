@@ -2,3 +2,8 @@ baseURL = 'https://aquanjsw.github.io/'
 languageCode = 'zh-cn'
 title = "aquanjsw's blog"
 theme = 'papermod'
+hasCJKLanguage = true
+
+[services]
+  [services.googleAnalytics]
+    ID = 'G-68SK6F8G3S'
