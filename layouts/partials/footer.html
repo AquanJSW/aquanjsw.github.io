@@ -8,7 +8,7 @@
   <script>
     async function setStatics() {
       const url = new URL('https://zaelggk.com/githubPages/activeUsers');
-      const response = await fetch(url, { headers: { 'mode': 'cors' } });
+      const response = await fetch(url);
       const result = await response.text();
       document.querySelector('#activeUsers').textContent = result;
     }
