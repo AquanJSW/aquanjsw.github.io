@@ -13,8 +13,16 @@ draft = false
 ## Windows Terminal
 
 ```powershell
-wt -M python main.py `; sp python main.py `; sp python main.py `; mf left `; sp python main.py
+wt -M python main.py `; `
+    sp python main.py `; `
+    sp python main.py `; `
+    mf left `; `
+    sp python main.py
 ```
+
+> 由于`wt`的命令形式为`wt [options] [subcommand; ...]`，所以在附加多个`subcommand`时，为了避免分号被解释为命令分隔符，需要将`;`转义，即`反引号+分号`
+>
+> 行尾的`空格+反引号`则是续行符
 
 ![Windows Terminal Concurrent Output Example](wt-example.gif)
 
