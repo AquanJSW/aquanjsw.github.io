@@ -8,9 +8,11 @@ draft = false
 
 如果需要并发运行某个/些命令，且它们有各自的输出，如果把它们放在同一个终端窗口中，输出会混在一起，不易阅读。
 
+## 基于终端
+
 把它们分开到不同window/pane中是一个解决方案，具体操作取决于终端。
 
-## Windows Terminal
+### Windows Terminal
 
 ```powershell
 wt -M python main.py `; `
@@ -46,6 +48,47 @@ if __name__ == '__main__':
     p.join()
     input('Press Enter to exit')
 ```
+
+## 基于Socket
+
+如果只想运行一次脚本，可以考虑使用socket通信。
+
+以`Python`的`logging`模块为例:
+
+服务器端可采用`pylogserver-aquanjsw`包;
+
+客户端：
+
+```python
+import logging
+import logging.handlers
+import multiprocessing as mp
+import os
+import time
+
+
+def job(port):
+    logger = logging.getLogger(str(os.getpid()))
+    logger.setLevel(logging.DEBUG)
+    logger.addHandler(logging.handlers.SocketHandler("localhost", port))
+    for i in range(3):
+        logger.info(f"Message {i}")
+        time.sleep(1)
+
+
+def main():
+    with mp.Pool(processes=4) as pool:
+        pool.map(job, [9990, 9991, 9992])
+
+
+if __name__ == '__main__':
+    main()
+
+```
+
+运行示例：
+
+![pylog-example](pylog-example.gif)
 
 ## Reference
 
