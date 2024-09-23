@@ -7,7 +7,7 @@
   <a class="link mx-6" href="https://gohugo.io/" rel="noopener" target="_blank">powered by hugo️️</a>️
   <script>
     async function setStatics() {
-      const url = new URL('https://zaelggk.com/githubPages/activeUsers');
+      const url = new URL('https://zaelggk.com/app/githubPages/activeUsers');
       const response = await fetch(url);
       const result = await response.text();
       document.querySelector('#activeUsers').textContent = result;
