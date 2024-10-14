@@ -2,9 +2,12 @@
 title = 'Batch Norm加速效果明显，Lazy层不影响精准度'
 date = 2024-08-30T13:34:25+08:00
 draft = false
+categories = ['ML']
+tags = ['PyTorch', 'BatchNorm']
 +++
 
-测试代码：
+<details>
+<summary>测试代码</summary>
 
 ```python
 import logging
@@ -187,6 +190,8 @@ if __name__ == '__main__':
     main()
 
 ```
+
+</details>
 
 运行结果：
 

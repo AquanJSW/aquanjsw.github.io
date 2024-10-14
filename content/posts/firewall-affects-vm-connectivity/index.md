@@ -1,12 +1,14 @@
 +++
-title = 'Host-only模式下的连通性问题可能是防火墙的锅'
+title = 'Firewall影响Host-Only模式下连通性一例'
 date = 2024-08-01T10:54:43+08:00
 draft = false
+categories = ['Network']
+tags = ['OpenWRT', 'Firewall', 'VM']
 +++
 
 ## 背景
 
-有些VM不方便设置代理，如果没有基于类似OpenWRT的实体设备，新建一个这样的虚拟路由器或许是个不错的选择。
+有些VM不方便设置代理，通过一个OpenWRT VM的透明代理进行连接是一个不错的选择。
 
 ## 问题
 

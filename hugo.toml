@@ -1,21 +1,22 @@
+# This file will be ignored if `config/_default/*.toml` is present.
 baseURL = 'https://aquanjsw.github.io/'
 languageCode = 'zh-cn'
 title = "aquanjsw's blog"
-theme = 'paper'
+theme = 'blowfish'
 hasCJKLanguage = true
 
 [services]
-  [services.googleAnalytics]
-    ID = 'G-68SK6F8G3S'
-    
+[services.googleAnalytics]
+ID = 'G-68SK6F8G3S'
+
 [markup]
-  [markup.goldmark]
-    [markup.goldmark.extensions]
-      [markup.goldmark.extensions.passthrough]
-        enable = true
-        [markup.goldmark.extensions.passthrough.delimiters]
-          block = [['\[', '\]'], ['$$', '$$']]
-          inline = [['\(', '\)']]
+[markup.goldmark]
+[markup.goldmark.extensions]
+[markup.goldmark.extensions.passthrough]
+enable = true
+[markup.goldmark.extensions.passthrough.delimiters]
+block = [['\[', '\]'], ['$$', '$$']]
+inline = [['\(', '\)']]
 
 [params]
-  math = true
+math = true

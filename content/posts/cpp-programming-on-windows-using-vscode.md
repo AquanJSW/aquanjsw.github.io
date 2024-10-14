@@ -2,6 +2,8 @@
 title = '不建议在Windows平台用VSCode编写C/C++/CUDA程序'
 date = 2024-08-31T16:04:42+08:00
 draft = false
+categories = ['Programming']
+tags = ['VSCode', 'C/C++', 'CUDA']
 +++
 
 由于C/C++/CUDA编程需要配置大量环境变量，虽然MSVC工具链提供了可以一键设置环境的`vcvarsall.bat`脚本，但目前在VSCode中并没有任何方法可以通过自动调用/分析该脚本来设置编译环境，因此不建议在Windows平台使用VSCode编写C/C++/CUDA程序。

@@ -2,6 +2,8 @@
 title = '终端并发输出'
 date = 2024-08-26T21:23:41+08:00
 draft = false
+categories = ['Utility']
+tags = ['Terminal', 'Concurrent']
 +++
 
 ## 背景
@@ -28,7 +30,8 @@ wt -M python main.py `; `
 
 ![Windows Terminal Concurrent Output Example](wt-example.gif)
 
-示例中的`main.py`：
+<details>
+<summary> <code>main.py</code> </summary>
 
 ```python
 import multiprocessing as mp
@@ -49,6 +52,8 @@ if __name__ == '__main__':
     input('Press Enter to exit')
 ```
 
+</details>
+
 ## 基于Socket
 
 如果只想运行一次脚本，可以考虑使用socket通信。
@@ -57,7 +62,8 @@ if __name__ == '__main__':
 
 服务器端可采用`pylogserver-aquanjsw`包;
 
-客户端：
+<details>
+<summary> 客户端示例 </summary>
 
 ```python
 import logging
@@ -85,6 +91,8 @@ if __name__ == '__main__':
     main()
 
 ```
+
+</details>
 
 运行示例：
 

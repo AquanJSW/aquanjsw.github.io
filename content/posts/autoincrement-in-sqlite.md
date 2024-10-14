@@ -1,8 +1,12 @@
 +++
-title = 'SQLite：谨慎使用AUTOINCREMENT'
+title = '谨慎使用AUTOINCREMENT'
 date = 2024-08-02T19:21:39+08:00
 draft = false
+categories = ['Database']
+tags = ['SQLite']
 +++
+
+{{< katex >}}
 
 ## 背景
 
@@ -16,7 +20,7 @@ SQLite默认自带一个名为`rowid`的列，如果没有指定主键，`rowid`
 
 两种算法的共通点：下一个`rowid`值是当前最大`rowid`值加1。
 
-主要的区别在于：在`rowid`到达最大值（\(2^{63}-1=9223372036854775807\)）时，`AUTOINCREMENT`不会复用已删除/未使用的`rowid`，从而抛出错误；而默认算法会复用。
+主要的区别在于：在`rowid`到达最大值 \\(2^{63}-1=9223372036854775807\\) 时，`AUTOINCREMENT`不会复用已删除/未使用的`rowid`，从而抛出错误；而默认算法会复用。
 
 ## 结论
 

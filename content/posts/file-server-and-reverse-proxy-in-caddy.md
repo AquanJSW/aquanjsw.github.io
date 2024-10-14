@@ -1,7 +1,7 @@
 +++
 title = 'Caddy: file_server和reverse_proxy'
 date = 2024-08-10T08:39:14+08:00
-draft = false
+draft = true
 +++
 
 ```caddy
