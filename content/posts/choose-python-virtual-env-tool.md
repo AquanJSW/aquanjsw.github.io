@@ -12,8 +12,8 @@ Python 虚拟环境的必要性不必多说，创建虚拟环境的工具有很�
 由于我偶尔有对 postactivate 这类脚本的需求，virutalenvwrapper 和 conda
 可以满足条件。
 
-对于 Linux 平台，两者可以互补使用。一般情况下可以使用 conda ，
+- 对于 Linux 平台，两者可以互补使用。一般情况下可以使用 conda ，
 对于需要引用 *system-site-packages* 的情况，可使用 virtualenvwrapper
 
-对已 Windows 平台，一方面没有 *system-site-packages* 的问题，
+- 对于 Windows 平台，一方面没有 *system-site-packages* 的问题，
 另一方面 virtualenvwrapper 并没有原生支持，所以就选 conda 咯
