@@ -1,7 +1,7 @@
 +++
 title = 'WSL2可能影响Host性能'
 date = 2024-10-14T13:23:28+08:00
-draft = false
+draft = true
 categories = ['Windows']
 tags = ['WSL']
 +++
