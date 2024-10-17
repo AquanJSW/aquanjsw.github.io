@@ -3,7 +3,7 @@ title = 'xrdp on Ubuntu 20.04'
 date = 2024-10-15T14:26:51+08:00
 draft = false
 categories = ['Linux']
-tags = ['xrdp', 'Ubuntu', 'gnome']
+tags = ['xRDP', 'Ubuntu', 'Gnome']
 +++
 
 手里有个NVIDIA AGX Xavier, 这个型号似乎也就停止在Ubuntu 20.04了，想要使用更新版本

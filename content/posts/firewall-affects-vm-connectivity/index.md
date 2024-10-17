@@ -3,7 +3,7 @@ title = 'Firewall影响Host-Only模式下连通性一例'
 date = 2024-08-01T10:54:43+08:00
 draft = false
 categories = ['Network']
-tags = ['OpenWRT', 'Firewall', 'VM']
+tags = ['OpenWRT', 'Firewall', 'Virtual Machine']
 +++
 
 ## 背景

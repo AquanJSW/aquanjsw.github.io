@@ -3,7 +3,7 @@ title = '记录一次GPU Passthrough的实践'
 date = 2024-10-14T14:14:04+08:00
 draft = false
 categories = ['Linux']
-tags = ['iommu', 'QEMU/KVM', 'GPU Passthrough', 'libvirt']
+tags = ['IOMMU', 'QEMU/KVM', 'GPU Passthrough', 'libvirt']
 +++
 
 教程基本按照

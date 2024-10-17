@@ -3,7 +3,7 @@ title = '选择 Python 虚拟环境工具'
 date = 2024-10-16T18:27:58+08:00
 draft = false
 categories = ['Utility']
-tags = ['Windows', 'Linux', 'Python']
+tags = ['Python']
 +++
 
 Python 虚拟环境的必要性不必多说，创建虚拟环境的工具有很多，且都大同小异，

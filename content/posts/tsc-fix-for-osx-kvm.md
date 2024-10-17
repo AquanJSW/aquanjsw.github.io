@@ -3,7 +3,7 @@ title = '修复因TSC导致的boot panic'
 date = 2024-09-16T23:27:04+08:00
 draft = false
 categories = ['Linux']
-tags = ['QEMU/KVM', 'Hackintosh', 'Linux kernel']
+tags = ['QEMU/KVM', 'Hackintosh', 'Kernel']
 +++
 
 ## 背景
