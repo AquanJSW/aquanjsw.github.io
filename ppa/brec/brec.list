@@ -1,0 +1,1 @@
+deb [signed-by=/etc/apt/trusted.gpg.d/brec.gpg] https://aquanjsw.github.io/ppa/brec ./

@@ -1,0 +1,18 @@
+Package: brec
+Version: 2.15.1-1
+Architecture: amd64
+Maintainer: aquanjsw <zhdlcc@gmail.com>
+Installed-Size: 115615
+Depends: libc6 (>= 2.34), libgcc-s1 (>= 3.0), libstdc++6 (>= 5.2), zlib1g (>= 1:1.1.4)
+Filename: ./brec_2.15.1-1_amd64.deb
+Size: 38854558
+MD5sum: 2448d81c445aaefebf683b432935fa6a
+SHA1: e11fb92b2ce2d294d74a56b26dd54279c620fdce
+SHA256: 06b003b191085c106ff26fb90075eef467dde59753a5392a277bbf84a0c1f8e4
+Section: video
+Priority: optional
+Multi-Arch: foreign
+Homepage: https://rec.danmuji.org/
+Description: bilibili live stream recorder
+ Bililive Recorder is a live stream recorder for bilibili.com
+
