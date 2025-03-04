@@ -5,10 +5,10 @@ Maintainer: aquanjsw <zhdlcc@gmail.com>
 Installed-Size: 115615
 Depends: libc6 (>= 2.34), libgcc-s1 (>= 3.0), libstdc++6 (>= 5.2), zlib1g (>= 1:1.1.4)
 Filename: ./brec_2.15.1-1_amd64.deb
-Size: 38854558
-MD5sum: 2448d81c445aaefebf683b432935fa6a
-SHA1: e11fb92b2ce2d294d74a56b26dd54279c620fdce
-SHA256: 06b003b191085c106ff26fb90075eef467dde59753a5392a277bbf84a0c1f8e4
+Size: 38854554
+MD5sum: 62e64ea7bf30ac8f489646ce1f8b0fa7
+SHA1: 88915fd1b7ca9da8058af6b7141eae5d22a2b9f7
+SHA256: 6c9239f0966482a08d5f42edc6c86d4eacab7f90ba4ad848c822fa284c74373f
 Section: video
 Priority: optional
 Multi-Arch: foreign
