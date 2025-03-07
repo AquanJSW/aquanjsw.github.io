@@ -1,3 +1,5 @@
 {
-  "markdown-image.local.path": "./"
+  "markdown-image.local.path": "./",
+  "vim.disableExtension": true,
+  "editor.wordWrap": "bounded"
 }
