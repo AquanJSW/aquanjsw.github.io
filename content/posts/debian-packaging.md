@@ -54,7 +54,7 @@ dh_make -p $package_name-$version --createorig
 
 当然, 如果你本人就是项目的维护者, 那么你总是可以使用类似于这种的方法从git源码生成`orig.tar.*`文件
 
-接下来, 需要将debian目录下的文件进行修改, 以适应我们的项目, 详细信息请参考手册[^manual]:
+接下来, 需要将debian目录下的文件进行修改, 以适应我们的项目, 此处的文字只可看作笔记, 详细信息请参考手册[^manual]:
 
 - `debian/control`: 
     - 各种Depends字段中, **如果包含了特定系统的依赖, 并不需要在版本号中体现**, 因为这些依赖是针对构建时的系统的, 而不是针对目标系统的. 如果想要对构建时系统有所要求, 可以在`debian/rules`中写入检测系统的逻辑, 比如:
@@ -75,7 +75,7 @@ dh_make -p $package_name-$version --createorig
     - 之所以使用`dh`系列工具, 因为它是现在的主流 (`dh_make`默认生成的`debian/control`文件中已经加入了对该系列工具的依赖, 比如`debhelper-compat (= 13)`). 工具列表以及各个工具的行为请见manpage[^dh7], 系列中的大多数工具的默认行为就是我们想要的, 但如果有特殊需求, 可以在这里进行修改, 只需要在`debian/rules`文件中添加对应的命令的`override_*`目标即可.
     - 特别地, 我们关注一下`dh_auto_build`, `dh_install`两个工具, 这两个工具对生成deb包尤为重要
         - `dh_auto_build`
-            - 默认该工具会在项目目录下执行`make`命令 (也有其他行为, 相见对应的manpage), 如果我们的项目中正好有可供`dh_auto_build`默认使用的构建文件, 那么我们就不需要在`debian/rules`中添加`override_dh_auto_build`目标, 否则, 我们需要在该目标中添加构建命令
+            - 默认该工具会在项目目录下执行`make`命令 (也有其他行为, 详见对应的manpage), 如果我们的项目中正好有可供`dh_auto_build`默认使用的构建文件, 那么我们就不需要在`debian/rules`中添加`override_dh_auto_build`目标, 否则, 我们需要在该目标中添加构建命令
         - `dh_install`
             - 该命令负责将需要打包入deb的文件安装到临时目录, 该临时目录后续会被直接用来生成deb包. 其实`dh_install`有一系列姊妹工具, 比如`dh_installman`, `dh_installinit`等, 建议优先用这些姊妹工具, 而不是直接使用`dh_install`, 即我们要将`dh_install`当作fallback安装工具.
             - 一般来说, 我们并不需要在`debian/rules`中添加`override_dh_install`目标, `dh_install`及其姊妹工具会自动检索`debian`目录下的文件用于确认安装源和目标位置, 比如`dh_install`就会查找`debian/<package_name>.install`文件. 有关这些安装文件的格式, 请参考对应的manpage, 此处只放一行示例:
@@ -83,6 +83,7 @@ dh_make -p $package_name-$version --createorig
                 output/${env:ARCH}/release/* usr/lib/
                 ```
                 > 第一项是源文件路径 (此处使用了通配符和变量替换功能. 该路径是项目目录下的相对路径)
+                >
                 > 第二项是目标文件路径, 我们并不需要了解目标文件路径的绝对位置 (如果你想知道, 可以看对应的manpage), 这只是一个临时目录
 
 以下是一些常用的可选文件:
