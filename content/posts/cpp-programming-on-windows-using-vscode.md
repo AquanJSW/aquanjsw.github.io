@@ -1,7 +1,7 @@
 +++
 title = '不建议在Windows平台用VSCode编写C/C++/CUDA程序'
 date = 2024-08-31T16:04:42+08:00
-draft = false
+draft = true
 categories = ['Programming']
 tags = ['VSCode', 'C/C++', 'CUDA']
 +++

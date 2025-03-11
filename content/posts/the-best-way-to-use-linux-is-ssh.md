@@ -1,7 +1,7 @@
 +++
 title = '使用 Linux 的最佳姿势是 SSH'
 date = 2024-10-17T10:55:26+08:00
-draft = false
+draft = true
 categories = ['Linux']
 tags = ['SSH', 'Wayland', 'X11', 'Gnome']
 +++

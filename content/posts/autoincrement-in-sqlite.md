@@ -1,7 +1,7 @@
 +++
 title = '谨慎使用AUTOINCREMENT'
 date = 2024-08-02T19:21:39+08:00
-draft = false
+draft = true
 categories = ['Database']
 tags = ['SQLite']
 +++
