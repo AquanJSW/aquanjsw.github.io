@@ -4,7 +4,7 @@ date = 2025-04-14T15:42:56+08:00
 draft = false
 +++
 
-最近入手了一台N100小主机作为路由，前面已经对比实验了[Windows作路由]({(< ref "windows-as-router.md" >)})和[Linux作路由]({(< ref "arch-as-router.md" >)})的性能，最终选择了Linux作为路由。
+最近入手了一台N100小主机作为路由，前面已经对比实验了[Windows作路由]({{% ref "posts/windows-as-router" %}})和[Linux作路由]({{% ref "posts/arch-as-router" %}})的性能，最终选择了Linux作为路由。
 
 之所以要做上述实验，是考虑到用N100仅作为路由是纯纯的浪费性能，为了充分利用N100的性能，决定加入一个小游戏串流功能。
 
