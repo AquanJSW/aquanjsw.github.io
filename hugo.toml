@@ -20,3 +20,7 @@ inline = [['\(', '\)']]
 
 [params]
 math = true
+
+[caches]
+  [caches.images]
+    dir = ':cacheDir/images'
