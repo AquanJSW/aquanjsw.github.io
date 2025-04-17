@@ -50,7 +50,17 @@ dest_gpu_bsf="00:02.1"
 
 setup() {
         set -e
+        # Unset first, because there exists a bug
+        # that the GPU driver of the guest will raise error code 43 when the guest reboots.
+        echo 0 > "/sys/devices/pci0000:00/0000:$orig_gpu_bsf/sriov_numvfs"
         echo 1 > "/sys/devices/pci0000:00/0000:$orig_gpu_bsf/sriov_numvfs"
+
+        # Check if the GPU is already bound to vfio-pci
+        lspci -s $dest_gpu_bsf -k | grep -q vfio-pci
+        if [ $? -eq 0 ]; then
+                set +e
+                return 0
+        fi
 
         dest_gpu="0000:$dest_gpu_bsf"
         dest_gpu_vd="$(cat /sys/bus/pci/devices/$dest_gpu/vendor) $(cat /sys/bus/pci/devices/$dest_gpu/device)"
